@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NUELL — Websites, Funnels & Automation</title>
+<meta name="description" content="NUELL builds high-converting websites, funnels and GoHighLevel automation systems.">
+<style>
+:root{--bg:#050814;--card:#0d1628;--card2:#111d32;--text:#fff;--muted:#9daabd;--line:rgba(255,255,255,.1);--g:linear-gradient(110deg,#1265ff,#743cff,#ed2bd1,#ff8b1f)}
+body.light{--bg:#f6f8ff;--card:#fff;--card2:#eef3ff;--text:#11182f;--muted:#59657b;--line:rgba(17,24,47,.1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:.3s}a{text-decoration:none;color:inherit}button{font:inherit}
+.container{width:min(1160px,calc(100% - 30px));margin:auto}nav{position:fixed;z-index:99;top:0;width:100%;backdrop-filter:blur(18px);background:rgba(5,8,20,.78);border-bottom:1px solid var(--line)}body.light nav{background:rgba(255,255,255,.82)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:.15em}.mark{width:42px;height:42px;border-radius:12px;background:var(--g);display:grid;place-items:center;font-weight:1000;color:#fff}.links{display:flex;gap:22px;color:var(--muted);font-size:13px;font-weight:750}.links a:hover{color:var(--text)}.actions{display:flex;gap:8px;align-items:center}
+.btn,.theme{border:0;border-radius:11px;padding:12px 17px;cursor:pointer;font-weight:850}.btn{background:var(--g);color:#fff;box-shadow:0 12px 35px #743cff35}.outline,.theme{background:transparent;color:var(--text);border:1px solid var(--line);box-shadow:none}.theme{width:42px;height:42px;padding:0}
+.hero{min-height:100vh;padding:145px 0 80px;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:52px 52px}.grid{display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}.badge,.tag{display:inline-block;border:1px solid #743cff66;border-radius:999px;color:#8978ff;padding:6px 10px;font-size:10px;font-weight:900;letter-spacing:.08em}.badge:before{content:"●";color:#31df8a;margin-right:7px}
+h1{font-size:clamp(46px,6vw,76px);line-height:1.02;letter-spacing:-.055em;margin:20px 0}.gradient{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p,.sub{color:var(--muted);font-size:17px}.buttons{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0}.trust{display:flex;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:12px;font-weight:800}
+.visual,.card,.project,.panel,.demo{background:var(--card);border:1px solid var(--line);border-radius:22px}.visual{padding:23px;box-shadow:0 25px 80px #0005}.top{display:flex;justify-content:space-between;color:var(--muted);font-size:11px}.live{color:#31df8a}.node{padding:15px;margin:10px auto;max-width:80%;border:1px solid #743cff55;background:#743cff12;border-radius:13px}.node small{display:block;color:var(--muted)}.arrow{text-align:center;color:#8675ff}.final{background:var(--g);border:0;text-align:center;font-weight:900}
+section{padding:90px 0}.kicker{color:#806eff;font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.title{font-size:clamp(35px,4vw,56px);line-height:1.05;letter-spacing:-.04em;margin:9px 0 16px}.head{margin-bottom:38px}
+.cards,.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{padding:23px;transition:.25s}.card:hover,.project:hover{transform:translateY(-5px);border-color:#743cff88}.num{color:#806eff;font-size:11px;font-weight:900}.card p,.project p{color:var(--muted);font-size:13px}
+.project{overflow:hidden;transition:.25s}.preview{height:190px;padding:17px;background:radial-gradient(circle at 80% 20%,#ed2bd144,transparent 30%),radial-gradient(circle at 20% 80%,#1265ff44,transparent 35%),#081020}.browser{height:100%;background:#0e192c;border:1px solid #ffffff18;border-radius:12px;padding:12px}.dots{display:flex;gap:5px}.dots i{width:7px;height:7px;border-radius:50%;background:#667}.line{height:9px;width:55%;margin:14px 0;border-radius:9px;background:var(--g)}.line.small{width:35%;opacity:.55}.box{height:55px;border-radius:8px;background:linear-gradient(135deg,#13284d,#1c1339);border:1px solid #fff1}.info{padding:20px}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.tag{font-size:8px;padding:4px 7px}
+.demo{overflow:hidden}.demohead{padding:17px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}.steps{padding:20px}.step{display:flex;gap:13px;align-items:center;padding:15px;border-bottom:1px solid var(--line)}.step.active{background:#743cff12}.check{width:27px;height:27px;border-radius:50%;border:1px solid #743cff66;display:grid;place-items:center}.step.active .check{background:var(--g);color:#fff}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.panel{padding:27px}.form{display:grid;gap:12px}.form input,.form select,.form textarea{width:100%;padding:13px;border:1px solid var(--line);background:var(--card2);color:var(--text);border-radius:10px;font:inherit}.form textarea{min-height:130px}
+.faq{max-width:900px}.faqitem{border-bottom:1px solid var(--line)}.faqq{width:100%;display:flex;justify-content:space-between;background:none;color:var(--text);border:0;padding:19px 0;font-weight:850;text-align:left;cursor:pointer}.faqa{display:none;color:var(--muted);padding-bottom:18px}.faqitem.open .faqa{display:block}
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.wa{position:fixed;right:17px;bottom:17px;background:#16a657;color:#fff;padding:13px 17px;border-radius:999px;font-weight:900;z-index:90}
+.modal{display:none;position:fixed;inset:0;background:#000c;z-index:200;padding:20px;align-items:center;justify-content:center}.modal.show{display:flex}.modalbox{width:min(800px,100%);background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;position:relative}.close{position:absolute;right:15px;top:10px;background:none;border:0;color:var(--text);font-size:30px;cursor:pointer}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s}.visible{opacity:1;transform:none}
+@media(max-width:900px){.links{display:none}.grid,.contact{grid-template-columns:1fr}.cards,.projects{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.cards,.projects,.process{grid-template-columns:1fr}.actions .btn{display:none}h1{font-size:48px}.hero{padding-top:125px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav">
+<a class="logo" href="#home"><span class="mark">N</span>NUELL</a>
+<div class="links"><a href="#home">Home</a><a href="#services">Services</a><a href="#work">Work</a><a href="#automation">Automation</a><a href="#process">Process</a><a href="#contact">Contact</a></div>
+<div class="actions"><button class="theme" id="theme" onclick="toggleTheme()">☀</button><a class="btn" href="#contact">Start a Project</a></div>
+</div></nav>
+
+<section class="hero" id="home"><div class="container grid">
+<div class="reveal"><span class="badge">WEBSITES • FUNNELS • AUTOMATION</span>
+<h1>Your Website Shouldn't Just Look Good.<br><span class="gradient">It Should Generate Business.</span></h1>
+<p>I build high-converting websites, funnels and GoHighLevel systems that help businesses capture leads, follow up automatically and turn more enquiries into customers.</p>
+<div class="buttons"><a class="btn" href="#work">View My Work →</a><a class="btn outline" href="#automation">See Automation Demo →</a></div>
+<div class="trust"><span>✦ Lead Capture</span><span>✦ CRM</span><span>✦ Automation</span><span>✦ Booking</span></div></div>
+<div class="visual reveal"><div class="top"><b>NEW LEAD → CUSTOMER</b><span class="live">● LIVE DEMO</span></div>
+<div class="node">📝 <b>Website Form</b><small>Lead captured</small></div><div class="arrow">↓</div>
+<div class="node">👤 <b>GoHighLevel CRM</b><small>Contact + opportunity created</small></div><div class="arrow">↓</div>
+<div class="node">💬 <b>Instant Follow-Up</b><small>WhatsApp / SMS / Email</small></div><div class="arrow">↓</div>
+<div class="node">📅 <b>Appointment</b><small>Calendar + reminders</small></div><div class="arrow">↓</div><div class="node final">👤 CUSTOMER</div>
+</div></div></section>
+
+<section id="services"><div class="container"><div class="head reveal"><div class="kicker">Services</div><h2 class="title">Everything you need to turn traffic into <span class="gradient">customers.</span></h2><p class="sub">Websites, funnels and automation systems designed around conversion—not just aesthetics.</p></div>
+<div class="cards">
+<div class="card reveal"><span class="num">01</span><h3>Website Design</h3><p>Modern responsive websites designed around your business goals and customer journey.</p></div>
+<div class="card reveal"><span class="num">02</span><h3>Landing Pages & Funnels</h3><p>Focused pages built to turn visitors into enquiries, calls and bookings.</p></div>
+<div class="card reveal"><span class="num">03</span><h3>GoHighLevel CRM</h3><p>Organize leads, conversations, opportunities and customers in one system.</p></div>
+<div class="card reveal"><span class="num">04</span><h3>Lead Automation</h3><p>Automatically respond, nurture and follow up with leads.</p></div>
+<div class="card reveal"><span class="num">05</span><h3>Appointment Systems</h3><p>Let prospects book appointments while automated reminders reduce missed bookings.</p></div>
+<div class="card reveal"><span class="num">06</span><h3>WhatsApp / SMS / Email</h3><p>Keep leads engaged with automated communication across multiple channels.</p></div>
+</div></div></section>
+
+<section id="work"><div class="container"><div class="head reveal"><div class="kicker">Portfolio</div><h2 class="title">Projects designed to <span class="gradient">convert.</span></h2><p class="sub">Concept projects demonstrating how design, lead generation and automation can work together.</p></div>
+<div class="projects" id="projects"></div></div></section>
+
+<section id="automation"><div class="container"><div class="head reveal"><div class="kicker">Automation Demo</div><h2 class="title">See what happens <span class="gradient">after the click.</span></h2><p class="sub">Trigger the demo and watch a lead move through an automated customer journey.</p></div>
+<div class="demo reveal"><div class="demohead"><b>NUELL AUTOMATION ENGINE</b><span class="live">● DEMO MODE</span></div><div class="steps" id="steps">
+<div class="step"><div class="check">1</div><div><b>New Lead</b><small>Visitor submits website form.</small></div></div>
+<div class="step"><div class="check">2</div><div><b>CRM Contact Created</b><small>Lead is stored and tagged.</small></div></div>
+<div class="step"><div class="check">3</div><div><b>Instant Follow-Up</b><small>WhatsApp, SMS or email can be triggered.</small></div></div>
+<div class="step"><div class="check">4</div><div><b>Pipeline Updated</b><small>Opportunity moves into the correct stage.</small></div></div>
+<div class="step"><div class="check">5</div><div><b>Appointment</b><small>Prospect receives booking link.</small></div></div>
+<div class="step"><div class="check">6</div><div><b>Reminder Sequence</b><small>Automated reminders reduce no-shows.</small></div></div>
+<button class="btn" onclick="runAutomation()">▶ Trigger Test Lead</button><p id="status" class="sub"></p>
+</div></div></div></section>
+
+<section id="process"><div class="container"><div class="head reveal"><div class="kicker">Process</div><h2 class="title">From idea to <span class="gradient">automated system.</span></h2></div>
+<div class="process">
+<div class="card reveal"><span class="num">01</span><h3>Discover</h3><p>Understand the business, audience, offer and customer journey.</p></div>
+<div class="card reveal"><span class="num">02</span><h3>Structure</h3><p>Plan pages, CTAs, offers and conversion flow.</p></div>
+<div class="card reveal"><span class="num">03</span><h3>Build</h3><p>Create the responsive website and user experience.</p></div>
+<div class="card reveal"><span class="num">04</span><h3>Automate</h3><p>Connect CRM, lead follow-up, booking and reminders.</p></div>
+</div></div></section>
+
+<section><div class="container contact"><div class="panel reveal"><div class="kicker">About NUELL</div><h2 class="title">Connect.<br>Automate.<br><span class="gradient">Grow.</span></h2><p class="sub">NUELL focuses on building websites and business systems that connect design with automation.</p><br><p class="sub">The goal isn't unnecessary complexity. It's a customer journey that is easier to understand, manage and improve.</p></div>
+<div class="panel reveal"><div class="kicker">What I Build</div><h3>Modern Websites</h3><p class="sub">Responsive websites with strong visual direction and clear calls-to-action.</p><h3>Funnels</h3><p class="sub">Landing pages designed around specific offers and conversion goals.</p><h3>GoHighLevel Systems</h3><p class="sub">CRM, pipelines, workflows, lead follow-up and appointment systems.</p></div></div></section>
+
+<section><div class="container"><div class="head reveal"><div class="kicker">FAQ</div><h2 class="title">Questions, <span class="gradient">answered.</span></h2></div><div class="faq">
+<div class="faqitem"><button class="faqq">Can you build the website and automation together?<span>+</span></button><div class="faqa">Yes. A conversion-focused website can be connected to CRM, follow-up and booking.</div></div>
+<div class="faqitem"><button class="faqq">Are these real client projects?<span>+</span></button><div class="faqa">The projects are portfolio concepts demonstrating the type of systems NUELL can build. Replace them with verified client work as your portfolio grows.</div></div>
+<div class="faqitem"><button class="faqq">Can this connect to GoHighLevel?<span>+</span></button><div class="faqa">Yes. The website can be connected to real GoHighLevel forms, calendars, pipelines and workflows.</div></div>
+<div class="faqitem"><button class="faqq">Can visitors contact me on WhatsApp?<span>+</span></button><div class="faqa">Yes. WhatsApp buttons open a conversation with your configured number.</div></div>
+</div></div></section>
+
+<section id="contact"><div class="container"><div class="head reveal"><div class="kicker">Start A Project</div><h2 class="title">Tell me what you want to <span class="gradient">build.</span></h2><p class="sub">Send the basics and start the conversation.</p></div>
+<div class="contact"><div class="panel reveal"><h3>NUELL</h3><p class="sub">Websites • Funnels • GoHighLevel • Automation • Booking Systems</p><p><b>Email</b><br><a class="gradient" href="mailto:egwuonwuemmanuel897@gmail.com">egwuonwuemmanuel897@gmail.com</a></p><p><b>WhatsApp</b><br><a href="https://wa.me/2348088323698" target="_blank" style="color:#31c978">+234 808 832 3698</a></p><a class="btn" target="_blank" href="https://wa.me/2348088323698?text=Hi%20Nuel%2C%20I%27d%20like%20to%20discuss%20a%20website%20and%20automation%20project.">Message Me On WhatsApp →</a></div>
+<div class="panel reveal"><form class="form" id="form"><input required name="name" placeholder="Your name"><input required type="email" name="email" placeholder="Email address"><select name="service"><option>Website Design</option><option>Landing Page / Funnel</option><option>GoHighLevel CRM</option><option>Lead Automation</option><option>Website + Automation System</option></select><textarea name="message" placeholder="Tell me about your business and what you want built"></textarea><button class="btn">Send Project Brief →</button></form></div></div></div></section>
+
+<footer><div class="container foot"><b class="gradient">NUELL</b><span>CONNECT • AUTOMATE • GROW</span><span>© 2026 NUELL</span></div></footer>
+<a class="wa" target="_blank" href="https://wa.me/2348088323698?text=Hi%20Nuel%2C%20I%27d%20like%20to%20discuss%20a%20website%20and%20automation%20project.">WhatsApp ↗</a>
+
+<div class="modal" id="modal"><div class="modalbox"><button class="close" onclick="closeProject()">×</button><div class="kicker" id="mcat"></div><h2 class="title" id="mtitle"></h2><div class="preview"><div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="line"></div><div class="line small"></div><div class="box"></div></div></div><p class="sub" id="mdesc"></p><br><a class="btn" href="#contact" onclick="closeProject()">Build Something Like This →</a></div></div>
+
+<script>
+const projects=[
+["RoofFlow","ROOFING","Lead-generation website and automated quote funnel for roofing companies."],
+["PrimeHaus","REAL ESTATE","Premium real-estate website designed to capture buyer and seller enquiries."],
+["SmileCare","DENTAL","Dental booking experience with automated appointment reminders."],
+["CleanPro","CLEANING","Cleaning-service website built for instant quote requests and follow-up."],
+["Elevate","COACHING","Personal-brand funnel designed to turn visitors into discovery calls."],
+["NUELL Lead System","GOHIGHLEVEL","Website → CRM → follow-up → booking → customer system."]
+];
+document.getElementById("projects").innerHTML=projects.map((p,i)=>`
+<article class="project reveal"><div class="preview"><div class="browser"><div class="dots"><i></i><i></i><i></i></div><div class="line"></div><div class="line small"></div><div class="box"></div></div></div>
+<div class="info"><div class="tags"><span class="tag">${p[1]}</span><span class="tag">AUTOMATION</span></div><h3>${p[0]}</h3><p>${p[2]}</p><br><button class="btn" onclick="openProject(${i})">View Project →</button></div></article>`).join("");
+
+function openProject(i){let p=projects[i];mcat.textContent=p[1];mtitle.textContent=p[0];mdesc.textContent=p[2];modal.classList.add("show")}
+function closeProject(){modal.classList.remove("show")}
+modal.onclick=e=>{if(e.target===modal)closeProject()}
+function toggleTheme(){document.body.classList.toggle("light");let l=document.body.classList.contains("light");theme.textContent=l?"☾":"☀";localStorage.theme=l?"light":"dark"}
+if(localStorage.theme==="light"){document.body.classList.add("light");theme.textContent="☾"}
+let running=false;
+function runAutomation(){if(running)return;running=true;let s=document.querySelectorAll(".step");s.forEach(x=>x.classList.remove("active"));status.textContent="Starting automation...";s.forEach((x,i)=>setTimeout(()=>{x.classList.add("active");status.textContent="✓ Step "+(i+1)+" completed";if(i===s.length-1){setTimeout(()=>{status.textContent="✓ Demo completed — this is the type of journey your real GoHighLevel system can automate.";running=false},600)}},i*550))}
+document.querySelectorAll(".faqq").forEach(b=>b.onclick=()=>{let x=b.parentElement;x.classList.toggle("open");b.querySelector("span").textContent=x.classList.contains("open")?"−":"+"});
+form.onsubmit=e=>{e.preventDefault();let d=new FormData(form);let msg=`Hi Nuel, I'd like to start a project.%0A%0AName: ${d.get("name")}%0AEmail: ${d.get("email")}%0AService: ${d.get("service")}%0A%0ADetails:%0A${encodeURIComponent(d.get("message"))}`;location.href="https://wa.me/2348088323698?text="+msg};
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")}),{threshold:.1});document.querySelectorAll(".reveal").forEach(x=>obs.observe(x));
+</script>
+</body>
+</html>
